@@ -1,0 +1,14 @@
+tRange=[0 8];
+Y0=[20.42e8 1 0]';
+[tSol, YSol]=ode45(@SIRmodel,tRange,Y0);
+S=YSol(:,1);
+I=YSol(:,2);
+R=YSol(:,3);
+plot(tSol,S,'--r'); 
+hold on;
+plot(tSol,I,':b');
+plot(tSol,R,'-.m');
+hold off;
+legend('Susceptible','Infected','Recovered');
+xlabel('Weeks');
+ylabel('persons');
