@@ -1,0 +1,14 @@
+num1=[12.287 23.876];
+den1=[1 5.646 16.933 23.876 0];
+num2=9;
+den2=[1 3 9 0];
+t=0:0.05:5;
+c1=step(num1,den1,t);
+c2=step(num2,den2,t);
+plot(t,c1,'-',t,c2,'.',t,t,'-');
+grid on;
+title('Unit ramp response of Compensated Systems');
+xlabel('t Secs');
+ylabel('Unit Ramp Input and output c1 and c2');
+text(2.55,3.8,'Compensated System (Method 1)');
+text(2.35,1.75,'Compensated System (Method 2)');
